@@ -1,5 +1,7 @@
 # aircraft-mask-segmentation
-Amaç, savaş uçaklarının video üzerinden bulunma olasılıklarının en yüksek olduğu pikselleri kırmızı yapan bir heatmap elde etmek. Bunun için Savaş uçakları YOLO dataseti kullanılacaktır. 2 farklı yöntem ile YOLO datasından maskeler eldildi. Bu yeni data ile Simple CNN, ResNet, EfficientNet, MobileNet, Vit ve zaman bağlamı olan sıralı datalarla eğitildiğinde daha iyi sonuç verebilecek 3'lü input adını verdiğim bir model üzerinde eğitim yapıldı. En iyi sonuç U-Net modelinde elde edildi.
+Amaç, savaş uçaklarının video üzerinden bulunma olasılıklarının en yüksek olduğu pikselleri kırmızı yapan bir heatmap elde etmek. Bunun için Savaş uçakları YOLO dataseti kullanılacaktır. 2 farklı yöntem ile YOLO datasından maskeler eldildi. Bu yeni data ile Simple CNN, ResNet, EfficientNet, MobileNet, Vit ve 3'lü input adını verdiğim bir model üzerinde eğitim yapıldı. En iyi sonuç U-Net modelinde elde edildi.
+
+https://github.com/user-attachments/assets/6da74329-338d-48aa-b0bc-cc6d80f266f7
 
 Yöntem-1 
 
@@ -28,5 +30,23 @@ Bu maskeler ile eğitilen hafif bir U-Net modeli kullanılarak video segmentasyo
 
 
 <img width="290" alt="Ekran Resmi 2024-11-18 17 15 32" src="https://github.com/user-attachments/assets/7da0a888-0b88-457d-a2a8-e3b87031dabf">
+
+
+Modeli Geliştirmek için Kullanılan Ekstra Modüller
+
+Özellikle motorlu araşlar üzerinde kullanılan kameralarda karşılaşılan problemlerden biri de yüksek frekanslı görüntülerin stabilize edilmesidir. Bunun için yapay zeka ve bazı optik çözümler getirilmiştir. TUBİTAK 2204'e sunduğumuz projemizde yapay zeka veya optik teknolojiler kullanılmadan kuyruk yapısı ve MSE (Mean Square Error) kullanarak real-time bir çözüm getirmeyi amaçlamaktayız.
+
+
+
+
+
+Model Eğitimi için Yapılacaklar
+
+Model mimarisinin karmaşıklaşması FPS i düşüreceğinden mimariyi değiştirmek yerine modelin eğitildiği datayı arttırıcağım. Bunun için videodan image elde edip YOLO ile etiketledikten sonra aynı maskeleme yöntemini kullanacağım.
+
+
+
+
+
 
 
