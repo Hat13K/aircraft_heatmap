@@ -29,12 +29,16 @@ Bazı resimler daha ince işlem gerektirir, bu tarz resimler benim datamda 150-2
 Bu maskeler ile eğitilen hafif bir U-Net modeli kullanılarak video segmentasyonu yapıldı. 
 
 
-<img width="290" alt="Ekran Resmi 2024-11-18 17 15 32" src="https://github.com/user-attachments/assets/7da0a888-0b88-457d-a2a8-e3b87031dabf">
 
 
-Modeli Geliştirmek için Kullanılan Ekstra Modüller
+Projeyi Geliştirmek için Kullanılacak  Modüller
 
 Özellikle motorlu araşlar üzerinde kullanılan kameralarda karşılaşılan problemlerden biri de yüksek frekanslı görüntülerin stabilize edilmesidir. Bunun için yapay zeka ve bazı optik çözümler getirilmiştir. TUBİTAK 2204'e sunduğumuz projemizde yapay zeka veya optik teknolojiler kullanılmadan kuyruk yapısı ve MSE (Mean Square Error) kullanarak real-time bir çözüm getirmeyi amaçlamaktayız.
+
+
+
+
+https://github.com/user-attachments/assets/abe715d3-6738-43dc-86c0-3e41ddd5eb14
 
 
 
