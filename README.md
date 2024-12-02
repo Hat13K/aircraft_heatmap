@@ -1,4 +1,8 @@
 # aircraft-mask-segmentation
+
+Model için kullanılan data :https://www.kaggle.com/datasets/tayyipcanbay/military-aircraft-detection-dataset-yolo-version
+
+
 Amaç, savaş uçaklarının video üzerinden bulunma olasılıklarının en yüksek olduğu pikselleri kırmızı yapan bir heatmap elde etmek. Bunun için Savaş uçakları YOLO dataseti kullanılacaktır. 2 farklı yöntem ile YOLO datasından maskeler eldildi. Bu yeni data ile Simple CNN, ResNet, EfficientNet, MobileNet, Vit ve 3'lü input adını verdiğim bir model üzerinde eğitim yapıldı. En iyi sonuç U-Net modelinde elde edildi.
 
 https://github.com/user-attachments/assets/6da74329-338d-48aa-b0bc-cc6d80f266f7
@@ -46,7 +50,13 @@ https://github.com/user-attachments/assets/abe715d3-6738-43dc-86c0-3e41ddd5eb14
 
 Model Eğitimi için Yapılacaklar
 
+Data Arttırma
+
 Model mimarisinin karmaşıklaşması FPS i düşüreceğinden mimariyi değiştirmek yerine modelin eğitildiği datayı arttırıcağım. Bunun için videodan image elde edip YOLO ile etiketledikten sonra aynı maskeleme yöntemini kullanacağım.
+
+Model geliştirme
+
+Data büyüklüğü istenen seviye ulaştığında eğitilen modelin ağırlıklarını ve mimarisini kullanarak bir fine tuning ile model geliştirilicek. Ama bu model zaman ilişkisini de kullanan bir model olucak t zamanında alınan input t-1 zamanındaki inputun outputunu da da belli bir oranda etkileyecek. Bu tarz bir model models dizinindeki 3'lü inputda belirtilmiştir. Bu modelin fine tune da ihtiyacı olan data uzun bir aircaft videosunun karelerinden elde edilecek.
 
 
 
