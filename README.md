@@ -37,7 +37,7 @@ Bu maskeler ile eğitilen hafif bir U-Net modeli kullanılarak video segmentasyo
 
 ##Projeyi Geliştirmek için Kullanılacak  Modüller
 
-Özellikle motorlu araşlar üzerinde kullanılan kameralarda karşılaşılan problemlerden biri de yüksek frekanslı görüntülerin stabilize edilmesidir. Bunun için yapay zeka ve bazı optik çözümler getirilmiştir. TÜBİTAK 2204'e sunduğumuz projemizde yapay zeka veya optik teknolojiler kullanılmadan kuyruk yapısı ve MSE (Mean Square Error) kullanarak real-time bir çözüm getirmeyi amaçlamaktayız.
+Özellikle motorlu araşlar üzerinde kullanılan kameralarda karşılaşılan problemlerden biri de yüksek frekanslı görüntülerin stabilize edilmesidir. Bunun için yapay zeka ve bazı optik çözümler getirilmiştir. TÜBİTAK 2204'e sunduğumuz projemizde yapay zeka veya optik teknolojiler kullanılmadan kuyruk yapısı ve MSE (Mean Square Error) kullanarak jitter removing'e real-time bir çözüm getirmeyi amaçlamaktayız.
 
 
 
