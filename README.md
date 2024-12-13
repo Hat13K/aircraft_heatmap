@@ -2,6 +2,8 @@
 
 Model için kullanılan data :https://www.kaggle.com/datasets/tayyipcanbay/military-aircraft-detection-dataset-yolo-version
 
+Maskelerin olduğu data https://drive.google.com/drive/folders/1FfN2gw5gIppTzfKW1sQeh85BbQ-5wNUD?usp=sharing
+
 
 Amaç, savaş uçaklarının video üzerinden bulunma olasılıklarının en yüksek olduğu pikselleri kırmızı yapan bir heatmap elde etmek. Bunun için savaş uçakları YOLO dataseti kullanılacaktır. 2 farklı yöntem ile YOLO datasından maskeler elde edildi. Bu yeni data ile Simple CNN, ResNet, EfficientNet, MobileNet, Vit ve 3'lü input adını verdiğim bir model üzerinde eğitim yapıldı. En iyi sonuç U-Net modelinde elde edildi.
 
