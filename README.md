@@ -64,9 +64,10 @@ Data büyüklüğü istenen seviye ulaştığında eğitilen modelin ağırlıkl
 
 Python dilinde yazılan bu proje, performansın arttırılabilmesi için Java diline çevrilecek.
 
-Yararlanılan kaynaklar
+Yararlanılan bazı kaynaklar
 
 https://pypi.org/project/segmentation-models-pytorch/
+
 https://www.learnpytorch.io
 
 
