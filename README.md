@@ -70,7 +70,11 @@ https://pypi.org/project/segmentation-models-pytorch/
 
 https://www.learnpytorch.io
 
+https://www.scaler.com/topics/region-of-interest-opencv/
 
+https://www.mdpi.com/2076-3417/14/20/9303
+
+https://ieeexplore.ieee.org/document/8519916
 
 
 
