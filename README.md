@@ -18,7 +18,7 @@ Maskelerin oluşturulmasında, her image için o imagein boyutlarında grayscale
 
 ROI-OTSU benzeri bir thresholding algoritması kullanılarak maskeler elde edildi. Bu yöntemde YOLO datasındaki koordinatlar kullanılarak thresholding yapılacak bölge bir elips içine sınırlandırıldı. Bu sınırın dışında kalan bölgelerin piksel değeri 0 yapıldı. Sınırın içindeki hedef için grayscale formatında eşikleme yapıldı. Tüm data genel olarak 2 aşamadan geçti.
 
-##Genel Data Oluştuma
+##Genel Data Oluşturma
 
 Burda genel olarak tüm maskeler 2 eşik değere göre ayarlanır: mean_circumference* ve mean_intensity*. Mean_circumference elipsin sırındaki pikseller olması sebebiyle arka planın piksellerine aittir bu yüzden beyaza yakınsa “Hedef arka plana göre koyudur” yorumu yapılabilir. Bu durumun tam tersi de tam tersi yorumu yapmaya olanak tanır. Hedef arka plana göre koyuysa mean_intensity değerinin altında kalan pikseller beyaz yapılır, hedef arka plana göre açıksa mean_ intensity değerinin üstündeki pikseller beyez yapılır. Yine de istisnai durumlar olabileceğinden (100-120 resimde bir denk gelir) eşik değere göre doğru olması tahmin edilen maskenin tam tersi output_mask_dir2 dizininde oluşturulur. Maskelerin oluşturulması gradyan inişi ile oluşturlan maskelere göre çok daha hızlı hesaplanır ve modelde daha yüksek doğruluğu vardır ama dezavantajı ekstra manuel inceleme gerektirir. 
 (*mean_intensity değeri, yarıçapı elipsin yarıçap değerinin yarısı kadar olan bir elipsin ortalama piksel değeridir)
