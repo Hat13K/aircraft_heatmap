@@ -60,7 +60,15 @@ Model mimarisinin karmaşıklaşması FPS i düşüreceğinden mimariyi değişt
 
 Data büyüklüğü istenen seviye ulaştığında eğitilen modelin ağırlıklarını ve mimarisini kullanarak bir fine tuning ile model geliştirilecek. Ama bu model zaman ilişkisini de kullanan bir model olucak t zamanında alınan input t-1 zamanındaki inputun outputunu da da belli bir oranda etkileyecek. Bu tarz bir model models dizinindeki 3'lü modellerde belirtilmiştir. Bu modelin fine tune da ihtiyacı olan data uzun bir aircaft videosunun karelerinden elde edilecek.
 
+![image](https://github.com/user-attachments/assets/a3625868-dd50-49b1-b293-aa039f68d9c5)
+
 Python dilinde yazılan bu proje, performansın arttırılabilmesi için Java diline çevrilecek.
+
+Yararlanılan kaynaklar
+
+https://pypi.org/project/segmentation-models-pytorch/
+https://www.learnpytorch.io
+
 
 
 
