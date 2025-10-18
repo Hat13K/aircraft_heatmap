@@ -7,11 +7,11 @@ Maskelerin olduğu data https://drive.google.com/drive/folders/1FfN2gw5gIppTzfKW
 
 Amaç, savaş uçaklarının video üzerinden bulunma olasılıklarının en yüksek olduğu pikselleri kırmızı yapan bir heatmap elde etmek. Bunun için savaş uçakları YOLO dataseti kullanılacaktır. 2 farklı yöntem ile YOLO datasından maskeler elde edildi. Bu yeni data ile Simple CNN, ResNet, EfficientNet, MobileNet, Vit ve 3'lü input adını verdiğim bir model üzerinde eğitim yapıldı. En iyi sonuç U-Net modelinde elde edildi.
 
-https://github.com/Hat13K/aircraft_heatmap/assets/video_1
+![](assets/video_1)
 ##Yöntem-1 
 
 Maskelerin oluşturulmasında, her image için o imagein boyutlarında grayscale formatında siyah bir maske oluşturulur. Bu maskede YOLO etiketinde bulunan merkez koordinatındaki piksel beyaz olacak; merkezden uzaklaştıkça, width ve height değerlerinin ortalamasından elde edilen yarıçap değerine ulaşıncaya kadar, her piksel için gri ton değeri 0'dan 255'e kadar artan bir gradyan oluşturuluyor.
-  <img src="https://aircraft_heatmap/aircraft_heatmap/assets/mask_1.png" width="500" height="200"/>
+ ![](assets/mask_1.png") 
 ##Yöntem-2
 
 ROI-OTSU benzeri bir thresholding algoritması kullanılarak maskeler elde edildi. Bu yöntemde YOLO datasındaki koordinatlar kullanılarak thresholding yapılacak bölge bir elips içine sınırlandırıldı. Bu sınırın dışında kalan bölgelerin piksel değeri 0 yapıldı. Sınırın içindeki hedef için grayscale formatında eşikleme yapıldı. Tüm data genel olarak 2 aşamadan geçti.
@@ -22,7 +22,7 @@ Burada genel olarak tüm maskeler 2 eşik değere göre ayarlanır: mean_circumf
 (*mean_intensity değeri, yarıçapı elipsin yarıçap değerinin yarısı kadar olan bir elipsin ortalama piksel değeridir)
 (*mean_circumference değeri, elips içinde kalan en dış piksellerin ortalama değeridir)
 
-<img width="454" alt="image" src="https://github.com/user-attachments/assets/f254f31e-0a1c-4aad-acbb-e9f6edaf5a6c">
+ ![](assets/mask_2.png") 
 
 
 Bazı resimler daha ince işlem gerektirir, bu tarz resimler benim datamda 150-200 resimde bir denk geldi. Bu resimler için while döngüsü içerisinde doğru maske seçilir ya da mean_intensity eşik değeri değiştirilir ve tekrar kontrol edilir. 
@@ -42,7 +42,7 @@ Bu maskeler ile eğitilen hafif bir U-Net modeli kullanılarak video segmentasyo
 
 
 
-https://github.com/user-attachments/assets/abe715d3-6738-43dc-86c0-3e41ddd5eb14
+![](assets/video_2)
 
 
 
@@ -58,7 +58,7 @@ Model mimarisinin karmaşıklaşması FPS i düşüreceğinden mimariyi değişt
 
 Data büyüklüğü istenen seviye ulaştığında U-Net'te eğitilen modelin ağırlıklarını ve mimarisini kullanarak bir fine tuning ile model geliştirilecek. Ama bu model zaman ilişkisini de kullanan bir model olucak t zamanında alınan input t-1 zamanındaki inputun outputunu da da belli bir oranda etkileyecek. Bu tarz bir model models dizinindeki 3'lü modellerde belirtilmiştir. Bu modelin fine tune da ihtiyacı olan data uzun bir aircaft videosunun karelerinden elde edilecek.
 
-![image](https://github.com/user-attachments/assets/a3625868-dd50-49b1-b293-aa039f68d9c5)
+![](assets/model)
 
 Python dilinde yazılan bu proje, performansın arttırılabilmesi için Java diline çevrilecek.
 
