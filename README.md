@@ -12,7 +12,7 @@ https://github.com/user-attachments/assets/6da74329-338d-48aa-b0bc-cc6d80f266f7
 ##Yöntem-1 
 
 Maskelerin oluşturulmasında, her image için o imagein boyutlarında grayscale formatında siyah bir maske oluşturulur. Bu maskede YOLO etiketinde bulunan merkez koordinatındaki piksel beyaz olacak; merkezden uzaklaştıkça, width ve height değerlerinin ortalamasından elde edilen yarıçap değerine ulaşıncaya kadar, her piksel için gri ton değeri 0'dan 255'e kadar artan bir gradyan oluşturuluyor.
-<img width="1032" alt="Ekran Resmi 2024-11-12 15 58 52" src="https://github.com/user-attachments/assets/fd6ddd7d-9bda-4ec8-bb7c-3fc75fbe3649">
+<img width="1032" src="https://github.com/Hat13K/aircraft_heatmap/assets/mask_1.png">
 
 ##Yöntem-2
 
