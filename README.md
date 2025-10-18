@@ -11,7 +11,7 @@ https://github.com/Hat13K/aircraft_heatmap/assets/video_1
 ##Yöntem-1 
 
 Maskelerin oluşturulmasında, her image için o imagein boyutlarında grayscale formatında siyah bir maske oluşturulur. Bu maskede YOLO etiketinde bulunan merkez koordinatındaki piksel beyaz olacak; merkezden uzaklaştıkça, width ve height değerlerinin ortalamasından elde edilen yarıçap değerine ulaşıncaya kadar, her piksel için gri ton değeri 0'dan 255'e kadar artan bir gradyan oluşturuluyor.
-  <img src="https://aircraft_heatmap/aircraft_heatmap/assets/img/map.png" width="500" height="200"/>
+  <img src="https://aircraft_heatmap/aircraft_heatmap/assets/mask_1.png" width="500" height="200"/>
 ##Yöntem-2
 
 ROI-OTSU benzeri bir thresholding algoritması kullanılarak maskeler elde edildi. Bu yöntemde YOLO datasındaki koordinatlar kullanılarak thresholding yapılacak bölge bir elips içine sınırlandırıldı. Bu sınırın dışında kalan bölgelerin piksel değeri 0 yapıldı. Sınırın içindeki hedef için grayscale formatında eşikleme yapıldı. Tüm data genel olarak 2 aşamadan geçti.
