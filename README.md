@@ -7,7 +7,7 @@ Maskelerin olduğu data https://drive.google.com/drive/folders/1FfN2gw5gIppTzfKW
 
 Amaç, savaş uçaklarının video üzerinden bulunma olasılıklarının en yüksek olduğu pikselleri kırmızı yapan bir heatmap elde etmek. Bunun için savaş uçakları YOLO dataseti kullanılacaktır. 2 farklı yöntem ile YOLO datasından maskeler elde edildi. Bu yeni data ile Simple CNN, ResNet, EfficientNet, MobileNet, Vit ve 3'lü input adını verdiğim bir model üzerinde eğitim yapıldı. En iyi sonuç U-Net modelinde elde edildi.
 
-![](assets/video_1)
+![](assets/video_1.mp4)
 ##Yöntem-1 
 
 Maskelerin oluşturulmasında, her image için o imagein boyutlarında grayscale formatında siyah bir maske oluşturulur. Bu maskede YOLO etiketinde bulunan merkez koordinatındaki piksel beyaz olacak; merkezden uzaklaştıkça, width ve height değerlerinin ortalamasından elde edilen yarıçap değerine ulaşıncaya kadar, her piksel için gri ton değeri 0'dan 255'e kadar artan bir gradyan oluşturuluyor.
@@ -42,7 +42,7 @@ Bu maskeler ile eğitilen hafif bir U-Net modeli kullanılarak video segmentasyo
 
 
 
-![](assets/video_2)
+![](assets/video_2.mp4)
 
 
 
